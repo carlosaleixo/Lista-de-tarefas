@@ -1,0 +1,82 @@
+
+
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.form input{
+    padding: 8px 15px;
+    margin-bottom: 1.8em;
+    border-radius: 0;
+    border: 1px solid  rgb(58, 58, 58);
+}
+
+/*estilizando o button*/
+.form input[type="submit"] {
+    padding: 15px 30px;
+    background: linear-gradient(45deg, #636363, #1e1e1e);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ,transform 0.3s, box-shadow 0.3s;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+}
+.form input[type="submit"]:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.form input[type="submit"]:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.form input[type="submit"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, rgb(36, 201, 201), rgb(47, 156, 156) );
+    color: rgb(58, 58, 58);
+}
+
+.form input[type="submit"]:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+
+}
+
+.input_container label{
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+.input_container input{
+    border-radius: 10px;
+}
